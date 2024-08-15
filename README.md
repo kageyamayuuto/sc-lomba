@@ -113,3 +113,13 @@ href/src = "{% static 'css/style.css' %}"
     ...
 {% endblock content %}
 ```
+
+### file yang perlu di konfigurasi
+```
+settings.py
+admin.py
+app/urls.py
+project/urls.py
+models.py
+views.py
+```
