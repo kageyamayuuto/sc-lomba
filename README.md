@@ -114,6 +114,12 @@ href/src = "{% static 'css/style.css' %}"
 {% endblock content %}
 ```
 
+### include/extends html page
+```
+{% include 'index.html' %}
+{% extends 'index.html' %}
+```
+
 ### file yang perlu di konfigurasi
 ```
 settings.py
