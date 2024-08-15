@@ -1,50 +1,67 @@
-#virtual environment setup
+# virtual environment setup
 
-##Menginstall virtual environment
-###(windows)
+## Menginstall virtual environment
+### (windows)
+```
 pip install virtualenv
-###(linux)
+```
+### (linux)
+```
 python3 -m pip install --user virtualenv
+```
 
-##Membuat virtual environment
+## Membuat virtual environment
+```
 python -m venv myvenv
-
-##Menjalankan visrtual environment
-###(windows)
+```
+## Menjalankan visrtual environment
+### (windows)
+```
 myvenv\Scripts\activate
-###(linux)
+```
+### (linux)
+```
 source myvenv/bin/activate
-
-##menginstall library yang diperlukan
+```
+## menginstall library yang diperlukan
+```
 pip install -r requirements.txt
+```
+# django setup
 
-#django setup
-
-##menginstall django dan Pillow untuk upload gambar
+## menginstall django dan Pillow untuk upload gambar
+```
 pip install django Pillow
-
-##menginstall project django di direktori utama
+```
+## menginstall project django di direktori utama
+```
 django-admin startproject myproject .
-
-##menjalankan project django
+```
+## menjalankan project django
+```
 python manage.py runserver
-
-##membuat aplikasi django
+```
+## membuat aplikasi django
+```
 python manage.py startapp myapp
-
-##membuat user admin
+```
+## membuat user admin
+```
 python manage.py createsuperuser
-
-##membuat migration
+```
+## membuat migration
+```
 python manage.py makemigrations <!--masukkan aplikasi django-->
-
-##migrate ke database
+```
+## migrate ke database
+```
 python manage.py migrate <!-- sesuaikan dengan konfigurasi database-->
+```
 
-#module configuration
+# module configuration
 
-##settings.py
-
+## settings.py
+```
 import os
 MEDIA_URL = '/images/'
 MEDIA_ROOT = os.path.join(BASE_DIR / 'images')
@@ -82,12 +99,17 @@ DATABASES = {
 <!-- static files -->
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+```
 
-###load static files(css, javascript, logo)
+### load static files(css, javascript, logo)
+```
 {% load static %}
 href/src = "{% static 'css/style.css' %}"
+```
 
-###block content
+### block content
+```
 {% block content %}
     ...
 {% endblock content %}
+```
