@@ -1,0 +1,13 @@
+{% include 'partials/header.html'%}
+{% block content%}
+<h1>
+    {{post.title}} by - {{post.author.username}}
+</h1>
+<p>
+    {{post.text}}
+</p>
+{% if post.image %}
+<img src="/images/{{post.image}}" width="250">
+{% endif %}
+{% endblock content%}
+{% include 'partials/footer.html'%}

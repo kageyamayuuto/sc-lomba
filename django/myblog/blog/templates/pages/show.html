@@ -1,0 +1,13 @@
+{% include 'partials/header.html'%}
+{%block content%}
+<h1>
+    {{post.title}} by - {{post.author.username}}
+</h1>
+<p>
+    {{post.text}}
+</p>
+{% for img in images %}
+<img src="/images/{{img.image}}" width="250">
+{% endfor %}
+{%endblock content%}
+{% include 'partials/footer.html'%}
