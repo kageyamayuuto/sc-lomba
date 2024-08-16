@@ -1,0 +1,30 @@
+{% include 'base.html'%}
+    {%block content %}
+    <nav class="py-2 bg-body-tertiary border-bottom">
+        <div class="container d-flex flex-wrap">
+          <ul class="nav me-auto">
+            <li class="nav-item"><a href="/" class="nav-link link-body-emphasis px-2 active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="/coffee" class="nav-link link-body-emphasis px-2">Coffee</a></li>
+            <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">About</a></li>
+          </ul>
+          <ul class="nav">
+            <li class="nav-item"><a href="/admin" class="nav-link link-body-emphasis px-2">Login</a></li>
+          </ul>
+        </div>
+      </nav>
+    <h1>Feel Good Coffee</h1>
+    <div class="row">
+        {% for cof in coffee %}
+        <div class="card" style="width: 18rem;">
+            <img src="../../images/{{cof.image}}" class="card-img-top" alt="{{cof.name}}">
+            <div class="card-body">
+                <h5 class="card-title">{{cof.name}}</h5>
+                <p class="card-text">the price of this coffee is {{cof.price}}</p>
+                <a href="#" class="btn btn-primary">add to cart <sup>qty {{cof.quantity}}</sup></a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {%endblock content%}
+
